@@ -16,10 +16,12 @@
 
     &:first-child {
         margin-right: 7.5px;
+        // background-color: aqua;
     }
 
     &:last-child {
         margin-left: 7.5px;
+        // background-color: blue;
     }
 
     .content {
@@ -44,3 +46,7 @@
         }
     }
 }
+
+// .large {
+//     height: 380px;
+// }

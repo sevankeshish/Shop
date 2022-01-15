@@ -44,12 +44,22 @@ export default class Directory extends Component {
   }
 
   render() {
-    return(
-        <div className="directory-menu">
-            {this.state.sections.map(({id, title, imageUrl, size}) => (
-                <MenuItem key={id} props = {title} images={imageUrl} sizeLarge={size}></MenuItem>
-                ))}
-        </div>
-    ) 
+    return (
+      <div className="directory-menu">
+          {this.state.sections.map(({id, title, imageUrl, size}) => (
+              <MenuItem key={id} text = {title} images={imageUrl} sizeLarge={size}></MenuItem>
+              ))}
+      </div>
+      // <div className="directory-menu">
+      //   {this.state.sections.map((e) => (
+      //     <MenuItem
+      //       key={e.id}
+      //       text={e.title}
+      //       images={e.imageUrl}
+      //       sizeLarge={e.size}
+      //     ></MenuItem>
+      //   ))}
+      // </div>
+    );
   }
 }
