@@ -6,9 +6,11 @@ export const CollectionPreview = ({ article, shopItems }) => {
     <div className="collection-preview">
       <h1 className="title">{article.toUpperCase()}</h1>
       <div className="preview">
-        {shopItems.map((e) => (
-          <div key={e.id}>{e.name}</div>
-        ))}
+        {shopItems
+          .filter((shopItems, index) => index < 4)
+          .map((e) => (
+            <div key={e.id}>{e.name}</div>
+          ))}
       </div>
     </div>
   );
