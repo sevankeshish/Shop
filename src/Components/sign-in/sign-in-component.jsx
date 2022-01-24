@@ -44,7 +44,11 @@ export default class SignIn extends React.Component {
           ></FormInput>
           {/* <label>Password</label> */}
 
-          <CustomButton type="submit" value="Submit-form"> SIGN IN</CustomButton>
+          <CustomButton type="submit" value="Submit-form" >
+             SIGN IN
+             </CustomButton>
+
+             {/* <CustomButton type="submit" value="Submit-form" children={'romel'}/> */}
         </form>
       </div>
     );
