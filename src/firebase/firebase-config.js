@@ -3,6 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore/lite";
 // import { authenticatioin } from "./config";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCvcYc6q7TlFeUgIHkHhCod-qnr_3kfp54",
   authDomain: "fristproject-shop.firebaseapp.com",
@@ -13,7 +14,7 @@ const firebaseConfig = {
   measurementId: "G-8XH8WXK88D",
 };
 
-//   export default firebaseConfig;
+  // export default firebaseConfig;
 
 const app = initializeApp(firebaseConfig);
 export const authenticatioin = getAuth(app);
