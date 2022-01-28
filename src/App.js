@@ -5,8 +5,20 @@ import ShopPage from "./Components/Pages/Shop/shop-component";
 import { Header } from "./Components/header/header-component";
 import { signInAndSignUpPage } from "./Components/Pages/sign-in-and-sign-up/sign-in-and-sign-up-component";
 import { Route, Switch, Link } from "react-router-dom";
-import { authenticatioin } from "./firebase/firebase-config";
+import {
+  authenticatioin,
+  createUserProfileDocument,
+} from "./firebase/firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
+// import { db } from "./test";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
 
 //////////for testing
 // const HatsPage = () => (
@@ -25,6 +37,16 @@ class App extends React.Component {
 
   unsubscribeFromAuth = null;
 
+  //////////////////////////////////-----FIRESTORE------///////////////////////////////////////////
+  // componentDidMount() {
+  //   this.unsubscribeFromAuth = authenticatioin.onAuthStateChanged(async user => {
+  //     // this.setState({ currentUser: user });
+  //     // console.log(user);
+  //     createUserProfileDocument(user);
+  //   });
+  // }
+  //////////////////////////////////////////////////////////////////////////
+
   componentDidMount() {
     this.unsubscribeFromAuth = authenticatioin.onAuthStateChanged((user) => {
       this.setState({ currentUser: user });
@@ -33,7 +55,7 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
-    this.unsubscribeFromAuth()
+    this.unsubscribeFromAuth();
   }
 
   render() {
