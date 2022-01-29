@@ -36,3 +36,19 @@ firestore
 
 // firestore.doc("/user/CIji6NoC40S4hAEE1Wyb/cardItem/DZAicRzUIVy10OQ7n0Qb");
 // firestore.collection("/user/CIji6NoC40S4hAEE1Wyb/cardItem/");
+
+///////////////////////////////////////////Async Await//////////////////////////////
+// const myAsyncFunction = async () => {
+//   try {
+//     const userResponse = await fetch("dfsdfdsfsdfd");
+//     const users = await userResponse.json();
+//     const secondUser = users[1];
+//     console.log(secondUser);
+//     const postsResponse = await fetch("egrfdsdfvrfd" + secondUser.id);
+//     const post = await postsResponse.json();
+//     console.log(post);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+///////////////////////////////////////////////////////////////////////////////

@@ -40,9 +40,23 @@ class App extends React.Component {
   //////////////////////////////////-----FIRESTORE------///////////////////////////////////////////
   // componentDidMount() {
   //   this.unsubscribeFromAuth = authenticatioin.onAuthStateChanged(async user => {
+//     if (userAuth) {
+//       const userRef = await createUserProfileDocument(userAuth);
+
+//       userRef.onSnapshot(snapShot => {
+//         this.setState({
+//           currentUser: {
+//             id: snapShot.id,
+//             ...snapShot.data()
+//           }
+//         });
+//       });
+//     }
+// else{
+//     this.setState({ currentUser: userAuth });
   //     // this.setState({ currentUser: user });
   //     // console.log(user);
-  //     createUserProfileDocument(user);
+      // createUserProfileDocument(user);
   //   });
   // }
   //////////////////////////////////////////////////////////////////////////
