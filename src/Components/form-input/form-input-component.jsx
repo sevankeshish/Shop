@@ -2,7 +2,7 @@ import React from "react";
 import "./form-input-styles.scss";
 
 export const FormInput = ({ handleChange, label, ...otherprops }) => {
-  console.log('test', otherprops, handleChange)
+  // console.log('test', otherprops, handleChange)
   return (
     <div className="group">
       <input className="form-input" onChange={handleChange} {...otherprops} />
